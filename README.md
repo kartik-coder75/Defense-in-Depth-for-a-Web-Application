@@ -439,7 +439,9 @@ Snort captures packets from the interface before iptables filters them, so you s
 
 ---
 
+### Phase 6: Flask application and Nginx reverse proxy (pending)
 
+**Goal:** add the application layer. Nginx is the only public entry point on port 80 and forwards requests internally to Flask on `127.0.0.1:5000`. This phase comes before the inline IPS test so that a normal request to `/public` returns `200 OK` first, which makes the later "request never reached the application" result meaningful.
 
 **Step 6.1: Create the project folder and virtual environment (Ubuntu)**
 
