@@ -1,0 +1,13 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Backups and logs
+iptables-backup.rules
+*.log
