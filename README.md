@@ -231,17 +231,7 @@ sudo iptables -P OUTPUT ACCEPT
 sudo iptables -L -n -v --line-numbers
 ```
 
-Resulting INPUT chain:
 
-| # | Target | Match |
-|---|---|---|
-| 1 | ACCEPT | loopback interface |
-| 2 | ACCEPT | `ctstate RELATED,ESTABLISHED` |
-| 3 | ACCEPT | ICMP echo-request (type 8) |
-| 4 | ACCEPT | `tcp dpt:22 ctstate NEW` |
-| 5 | ACCEPT | `tcp dpt:80 ctstate NEW` |
-| 6 | LOG | rate-limited, prefix `IPTABLES-DROP: ` |
-| - | policy DROP | everything else |
 
 > **Common error:** `unknown option "--ctstate"` means the `-m conntrack` module was not named. Always write `-m conntrack --ctstate ...`.
 
