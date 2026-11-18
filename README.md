@@ -140,18 +140,7 @@ Key idea: passing the network firewall is not enough. The application also requi
 
 ---
 
-## 5. Lab environment
 
-| Item | Value used in this lab |
-|---|---|
-| Host OS | Windows |
-| Hypervisor | VMware Workstation (the original reference design used VirtualBox; any hypervisor with a host-only network works) |
-| Ubuntu VM | `192.168.56.101/24` on interface `ens33` |
-| Kali VM | `192.168.56.102/24` on interface `eth0` |
-| Nginx | 1.18.0 (Ubuntu package) |
-| Snort | 2.9.15.1 |
-| Python | 3 with Flask and PyJWT |
-| Tools | `ip`, `ping`, `curl`, `nc` (netcat), `iptables`, `journalctl`, `ss` |
 
 **Interface names differ between setups.** The original reference used `enp0s8` for the host-only adapter. This lab uses `ens33` on Ubuntu and `eth0` on Kali. Run `ip -br addr` and substitute your own interface name wherever `ens33` appears below.
 
