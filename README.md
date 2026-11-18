@@ -356,18 +356,7 @@ Make sure the local rules file is included:
 include $RULE_PATH/local.rules
 ```
 
-**Step 5.2: Create the custom rules (Ubuntu)**
 
-```bash
-sudo tee /etc/snort/rules/local.rules > /dev/null <<'EOF'
-# Defense-in-Depth Network Security Project
-# Custom Snort 2.9 rules
-alert icmp any any -> $HOME_NET any (msg:"LAB ICMP Echo Request Detected"; itype:8; sid:1000001; rev:1;)
-drop tcp any any -> $HOME_NET 80 (msg:"LAB Possible SQL Injection Pattern"; content:"1%27%20OR%201=1"; nocase; sid:1000002; rev:1;)
-alert tcp any any -> $HOME_NET any (msg:"LAB TCP SYN Activity Detected"; flags:S; sid:1000003; rev:1;)
-EOF
-sudo cat /etc/snort/rules/local.rules
-```
 
 | SID | Action | Protocol / port | Detects |
 |---|---|---|---|
