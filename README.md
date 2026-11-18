@@ -73,7 +73,7 @@ Phases marked **(done)** include the screenshots already captured. Phases marked
 |                       Hypervisor + Host-only adapter                       |
 |                                                                            |
 |   +----------------------------------------------------------------------+ |
-|   |             Host-only Network  --  192.168.56.0/24                    | |
+|   |             Host-only Network  --  192.168.56.0/24                   | |
 |   |                                                                      | |
 |   |   +-------------------------------+   +---------------------------+  | |
 |   |   |        UBUNTU VM              |   |         KALI VM           |  | |
