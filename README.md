@@ -218,7 +218,14 @@ sudo iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW -j ACCEPT
 
+# 3. Rate-limited logging for anything that reaches the end of the chain
+sudo iptables -A INPUT -m limit --limit 5/min --limit-burst 10 \
+     -j LOG --log-prefix "IPTABLES-DROP: " --log-level 4
 
+# 4. Default policies (apply AFTER the allow rules so you do not lock yourself out)
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT ACCEPT
 
 # 5. Verify
 sudo iptables -L -n -v --line-numbers
