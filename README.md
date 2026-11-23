@@ -61,7 +61,6 @@ In one sentence: Ubuntu is the protected web server, Kali generates controlled t
 - [ ] Phase 9: OAuth 2.0 Authorization Code flow
 - [ ] Phase 10: Final verification and summary
 
-Phases marked **(done)** include the screenshots already captured. Phases marked **(pending)** contain the full procedure and the screenshot names to capture.
 
 ---
 
