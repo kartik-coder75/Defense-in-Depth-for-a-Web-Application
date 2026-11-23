@@ -993,47 +993,7 @@ sudo tail -n 20 /var/log/nginx/access.log
 
 ---
 
-## 8. Screenshot index
-
-| File | Phase | Status |
-|---|---|---|
-| `01_kali_assign_ip_192-168-56-102.jpeg` | 1 | Captured |
-| `02_kali_ping_ubuntu_connectivity.jpeg` | 1 | Captured |
-| `03_kali_ip_setup_and_ping_full_view.jpeg` | 1 | Captured |
-| `04_ubuntu_assign_ip_and_ping_kali.jpeg` | 1 | Captured |
-| `05_ubuntu_iptables_backup_and_allow_rules.jpeg` | 2 | Captured |
-| `06_ubuntu_iptables_log_rule_and_default_drop.jpeg` | 2 | Captured |
-| `07_ubuntu_nginx_install_and_status.jpeg` | 3 | Captured |
-| `08_kali_http_request_to_nginx_200_ok.jpeg` | 3 | Captured |
-| `09_kali_blocked_port_443_timeout.jpeg` | 3 | Captured |
-| `10_ubuntu_iptables_counters_after_tests.jpeg` | 3 | Captured |
-| `11_ubuntu_firewall_drop_logs.jpeg` | 3 | Captured |
-| `12_ubuntu_snort_initialization.jpeg` | 4 | Captured |
-| `13_ubuntu_snort_config_validated.jpeg` | 4 | Captured |
-| `14_ubuntu_snort_custom_rules` | 5 | Pending |
-| `15_ubuntu_snort_ids_running` | 5 | Pending |
-| `16_kali_icmp_traffic_generation` | 5 | Pending |
-| `17_ubuntu_snort_icmp_alerts` | 5 | Pending |
-| `18_kali_tcp_syn_traffic_generation` | 5 | Pending |
-| `19_ubuntu_snort_tcp_syn_alerts` | 5 | Pending |
-| `20_ubuntu_flask_listening_localhost_5000` | 6 | Pending |
-| `21_ubuntu_nginx_reverse_proxy_config_test` | 6 | Pending |
-| `22_kali_public_endpoint_via_nginx_200_json` | 6 | Pending |
-| `23_ubuntu_nfqueue_rule_and_snort_inline_started` | 7 | Pending |
-| `24_kali_sqli_like_request_sent` | 7 | Pending |
-| `25_ubuntu_snort_inline_drop_alert` | 7 | Pending |
-| `26_ubuntu_nginx_flask_not_reached_and_counter_delta` | 7 | Pending |
-| `27_kali_jwt_missing_token_401` | 8 | Pending |
-| `28_kali_jwt_login_valid_token_200` | 8 | Pending |
-| `29_kali_jwt_tampered_token_401` | 8 | Pending |
-| `30_kali_oauth_authorize_code_redirect` | 9 | Pending |
-| `31_kali_oauth_token_exchange_and_protected_200` | 9 | Pending |
-| `32_kali_oauth_bad_redirect_400` | 9 | Pending |
-| `33_ubuntu_final_iptables_counters_summary` | 10 | Pending |
-
----
-
-## 9. Security notes for this repository
+## 8. Security notes for this repository
 
 - **Never commit secrets.** The JWT secret, admin password, OAuth client secret and real tokens belong in `.env`, which is listed in `.gitignore`. Commit `.env.example` with placeholders only.
 - **Redact tokens in screenshots.** Show only the first few characters, for example `eyJhbGci...[REDACTED]`.
@@ -1043,7 +1003,7 @@ sudo tail -n 20 /var/log/nginx/access.log
 
 ---
 
-## 10. Troubleshooting
+## 9. Troubleshooting
 
 | Problem | Likely cause and fix |
 |---|---|
@@ -1061,7 +1021,7 @@ sudo tail -n 20 /var/log/nginx/access.log
 
 ---
 
-## 11. Conclusion
+## 10. Conclusion
 
 This project demonstrates Defense in Depth by combining different security mechanisms:
 
