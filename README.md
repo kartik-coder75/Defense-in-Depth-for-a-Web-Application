@@ -50,10 +50,10 @@ In one sentence: Ubuntu is the protected web server, Kali generates controlled t
 
 ## 2. Project status
 
-- [x] Phase 1: Network setup (host-only IPs, connectivity)
-- [x] Phase 2: iptables firewall (default DROP, explicit allows, logging)
-- [x] Phase 3: Nginx installed and running; legitimate HTTP request tested
-- [x] Phase 4: Snort installed; configuration validated
+- [ ] Phase 1: Network setup (host-only IPs, connectivity)
+- [ ] Phase 2: iptables firewall (default DROP, explicit allows, logging)
+- [ ] Phase 3: Nginx installed and running; legitimate HTTP request tested
+- [ ] Phase 4: Snort installed; configuration validated
 - [ ] Phase 5: Snort IDS custom rules, ICMP and TCP SYN alerts
 - [ ] Phase 6: Flask application and Nginx reverse proxy
 - [ ] Phase 7: Snort inline IPS with NFQUEUE (SQL-injection-like request dropped)
@@ -61,7 +61,6 @@ In one sentence: Ubuntu is the protected web server, Kali generates controlled t
 - [ ] Phase 9: OAuth 2.0 Authorization Code flow
 - [ ] Phase 10: Final verification and summary
 
-Phases marked **(done)** include the screenshots already captured. Phases marked **(pending)** contain the full procedure and the screenshot names to capture.
 
 ---
 
